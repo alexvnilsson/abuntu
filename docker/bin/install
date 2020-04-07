@@ -1,0 +1,15 @@
+#!/bin/bash
+
+set -euo pipefail
+
+export DEBIAN_FRONTEND=noninteractive
+
+# Package details
+export NODEJS_VERSION=13.x
+
+sudo apt-get update
+
+sudo apt-get -y upgrade
+
+bin/install-deps
+bin/install-node

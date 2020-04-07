@@ -1,0 +1,13 @@
+#!/bin/bash
+
+set -euo pipefail
+
+export DEBIAN_FRONTEND=noninteractive
+
+if [ -z "${NODEJS_VERSION}" ]; then
+    # Set default NodeJS version if none specified.
+    NODEJS_VERSION=13.x
+fi
+
+curl -sL https://deb.nodesource.com/setup_${NODEJS_VERSION} | bash -
+apt-get install -yq --no-install-recommends nodejs

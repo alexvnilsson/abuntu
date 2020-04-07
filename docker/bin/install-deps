@@ -1,0 +1,7 @@
+#!/bin/bash
+
+set -euo pipefail
+
+export DEBIAN_FRONTEND=noninteractive
+
+apt-get install -yq --no-install-recommends gcc g++ make build-essential curl
