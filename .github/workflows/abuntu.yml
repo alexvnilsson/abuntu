@@ -16,7 +16,7 @@ jobs:
       - name: Build Docker-image
         run: bin/build
       - name: Publish to Registry
-        uses: elgohr/Publish-Docker-Github-Action@master
+        uses: elgohr/Publish-Docker-Github-Action@v5
         with:
           name: alexvnilsson/abuntu
           username: ${{ secrets.DOCKER_USERNAME }}
